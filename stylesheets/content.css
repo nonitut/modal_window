@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+
+@font-face {
+  font-family: "CarlaSansLight";
+  src: url("../fonts/CarlaSansLight.ttf") format("truetype");
+  font-style: Light;
+  font-weight: Light;
+}
+
+p{
+    font-family: 'CarlaSansLight';
+}
+/* Модальный (фон) */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    padding-top: 200px; /* Расположение коробки */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    /* background-color: rgb(0,0,0); /* Цвет запасной вариант  */
+    /* background-color: rgba(0,0,0,0.4); Черный с непрозрачностью */ 
+  }
+  
+  /* Модальное содержание */
+  .modal-content {
+    border-radius: 20px;
+    border: 1px  solid #000;
+    position: relative;
+    background-color: #fff8ab;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid #c13cfa;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(244, 27, 255, 0.2),0 6px 20px 0 rgba(126, 66, 255, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Добавить анимацию */
+  @-webkit-keyframes animatetop {
+    from {top: -500px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-500px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* Кнопка закрытия */
+  .close {
+    color:#bfb00a;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #cbd1ff;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    
+}
+
+.modal-body {
+    padding: 10px 16px;
+    line-height: 120%;
+
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #d5d4ff;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+}
+
+button{
+    margin-left: 40%;
+    padding: 10px 30px;
+    margin-top: 120px;
+    border-radius: 5px;
+    border: none;
+    background-color: #cbd1ff;
+    color: #000000;
+}
